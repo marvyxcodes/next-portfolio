@@ -1,0 +1,11 @@
+.navbar {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display:flex;
+    justify-content: space-around;
+    width: 30%;
+}

@@ -1,12 +1,13 @@
 import React from 'react'
-import budgetyIco from "@/app/react/images/budgetyIco.png";
-import phoThanhIco from "@/app/react/images/phoThanhIco.png";
-import weebMaxIco from "@/app/react/images/weebMax.png";
-import linkedIn from "@/app/react/images/linked-in.svg";
+import budgetyIco from "@/app/images/budgetyIco.png";
+import phoThanhIco from "@/app/images/phoThanhIco.png";
+import weebMaxIco from "@/app/images/weebMax.png";
+import linkedIn from "@/app/images/linked-in.svg";
+import Navbar from './components/Navbar';
 
 type Props = {}
 
-const About = (props: Props) => {
+const Home = (props: Props) => {
 
 const skills = {
     languages: ["Javascript", "TypeScript"],
@@ -79,7 +80,8 @@ let projectElements = projects.map((project) => {
   });
 
   return (
-    <div>
+    <div className="main">
+      <Navbar/>
         {/* INTRO BIO SECTION  */}
       <section id="top" className="">
         <article className="">
@@ -144,5 +146,5 @@ let projectElements = projects.map((project) => {
   )
 }
 
-export default About
+export default Home
 
