@@ -3,7 +3,7 @@ import budgetyIco from "@/app/images/budgetyIco.png";
 import phoThanhIco from "@/app/images/phoThanhIco.png";
 import weebMaxIco from "@/app/images/weebMax.png";
 import linkedIn from "@/app/images/linked-in.svg";
-import Navbar from './components/Navbar';
+import Navbar from '@/app/components/Navbar';
 
 type Props = {}
 

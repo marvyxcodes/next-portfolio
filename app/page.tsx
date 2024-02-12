@@ -1,118 +1,144 @@
-'use client'
+import React from "react";
+import linkedIn from "@/app/images/linked-in.svg";
+import budgetyIco from "@/app/images/budgetyIco.png";
+import phoThanhIco from "@/app/images/phoThanhIco.png";
+import weebMaxIco from "@/app/images/weebMax.png";
+import Image from "next/image";
 
-import React, { ChangeEvent, KeyboardEvent, KeyboardEventHandler, useState, useId } from 'react'
 import styles from "./page.module.css";
-import Image from 'next/image';
-import evLogo from "@/app/images/enticingVisions.png"
-import { v4 as uuidv4 } from "uuid";
 
-type Props = {}
+const Bio = () => {
+    //   const skills = {
+    //     languages: ["Javascript", "TypeScript"],
+    //     frameworks: ["React.js / Redux", "Next.js", "Express.js"],
+    //     other: [
+    //       "HTML",
+    //       "CSS",
+    //       "EJS",
+    //       "Mongoose",
+    //       "Bootstrap",
+    //       "Node.js",
+    //       "Tailwind UI",
+    //     ],
+    //     databases: ["Firebase", "mySQL", "MongoDB"],
+    //   };
 
-interface TerminalMessage {
-  id: string;
-  message: string;
-}
+    let projects = [
+        {
+            name: "Budgety",
+            picSrc: budgetyIco,
+            imgAlt: "Budget App",
+            tech: ["React", "Bootstrap", "Firestore"],
+            desc: "Cashflow budgeting application with integrated financial news API",
+            href: "https://budgety-5809a.web.app/",
+            repo: "https://github.com/enticingcode/budgety",
+        },
+        {
+            name: "Pho Thanh II",
+            picSrc: phoThanhIco,
+            imgAlt: "Pho Thanh Restaurant",
+            tech: ["React", "Firebase Hosted"],
+            desc: "Landing page for real local restaurant",
+            href: "https://pho-thanh-ii.web.app/",
+            repo: "https://github.com/enticingcode/pho-thanh-page",
+        },
+        {
+            name: "Weeb Max",
+            picSrc: weebMaxIco,
+            imgAlt: "Anime Merchandise Store",
+            tech: ["Next.js", "MongoDB", "Typescript", "Stripe"],
+            desc: "Full Stack E-Commerce Page for all things anime",
+            href: "https://weeb-max.vercel.app",
+            repo: "https://github.com/enticingcode/weebMax",
+        },
+    ];
 
-interface TerminalLines {
-  id: string;
-  text: string;
-  response: string;
-}
-
-const page = (props: Props) => {
-
-  // let termPrompt = [{id: uuid4(), text="dev@marvintrujillo.dev:"}]
-
-
-  let dirs = ["home, about, contact, projects"];
-  let knownCommands = ["ls", "cd"]
-
-  const [termLines, setTermLines] = useState<TerminalLines[]>([{ id: "1", text: "hackerman@192.168.32.12", response: "" }]);
-  // console.log(termLines[0].id);
-
-
-  // const [termLines, setTermLines] = useState<TerminalLines[]>([]);
-  const [commandHistory, setCommandHistory] = useState<String[]>([]);
-  // const [responses, setResponses] = useState<TerminalMessage[]>([]);
-
-
-  function handleState(value: string, response: string, elementID: string) {
-    // look for specific id and response via e.target.
-
-    setCommandHistory([...commandHistory, value]);
-
-    
-    let element = termLines.filter(item => {
-      return item.id === elementID;
-    })
-    
-    console.log(element);
-    setTermLines([...termLines, { id: response, text: "hackerman@192.168.32.12", response: response }]);
-    
-  }
-
-  function enterCommand(e: KeyboardEvent) {
-    // console.log(e);
-    let value = (e.target as HTMLInputElement).value;
-
-    // Need elementID two parents up
-    let elementID = (e.target as HTMLInputElement).parentElement?.parentElement?.id;
-    console.log(elementID);
-
-    if (e.key === "Enter") {
-      e.preventDefault();
-      // handleState(value);
-      if (value !== knownCommands[0]) {
-        let response = "poop not found";
-        handleState(value, response, elementID);
-        // setResponses([...responses, { id: uuidv4(), message: "Command not found" }])
-      }
-    }
-  }
-
-  // ID issue happening with uuid4 on <p> tag where server doesn't correspond to the same as client, not sure I will need id for it, just a reminder.
-  return (
-    <div className={styles.main}>
-      <Image
-        className={styles.evLogo}
-        src={evLogo}
-        alt="No Image"
-        width={100}
-        height={100}
-      ></Image>
-
-      {/* TERMINAL TEXT */}
-      <div className={styles.terminal}>
-        <section className={styles.commandCenter}>
-          {/* <p className={styles.termText}>hackerman@192.168.32.12
-            <span style={{ color: "white" }}>:</span></p>
-          <input className={styles.input}
-            type="text"
-            onKeyDown={enterCommand}
-            autoFocus></input> */}
-          {termLines.map(item => {
-            return (
-              <div key={item.id} id={item.id} className={styles.promptSection}>
-                <div className={styles.inLineContainer}>
-                  <p className={styles.termText}>{item.text}
-                    <span style={{ color: "white" }}>:</span></p>
-                  <input className={styles.input}
-                    type="text"
-                    onKeyDown={enterCommand}
-                    autoFocus></input>
+    let projectElements = projects.map((project) => {
+        return (
+            <div key={project.name} className="proj-node">
+                <Image
+                    className={styles.projectImage}
+                    alt={project.imgAlt}
+                    src={project.picSrc}
+                    width={300} 
+                    />
+                <ul className="t-stacks">
+                    {project.tech.map((item) => {
+                        return <li key={item}>{item}</li>;
+                    })}
+                </ul>
+                <div className="proj-info">
+                    <h1>{project.name}</h1>
+                    <p>{project.desc}</p>
+                    <div className="proj-links">
+                        <a target="_blank" href={project.href} rel="noreferrer">
+                            Demo
+                        </a>
+                        <a target="_blank" href={project.repo} rel="noreferrer">
+                            Repo
+                        </a>
+                    </div>
                 </div>
-                <p>{item.response}</p>
-              </div>
-            )
-          })}
-        </section>
-      </div>
-    </div>
-  )
-}
+            </div>
+        );
+    });
 
-export default page
+    return (
+        <main className={styles.home}>
+            {/* INTRO BIO SECTION  */}
+            <header id="top" className={styles.biocard}>
+                <div className={styles['bio-div']}>
+                    <h1 className="">Marvin Trujillo</h1>
+                    <h2>Full Stack Developer</h2>
+                    <p>I help develop technological solutions.</p>
+                    {/* <a
+                        href="https://www.linkedin.com/in/marvin-trujillo-b18b84132/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <Image src={linkedIn} alt="LinkedIn Social" />
+                    </a> */}
+                </div>
+                <div>
+                    <ul className={styles['nav-list']}>
+                        <li>Info</li>
+                        <li>Work</li>
+                        <li>Projects</li>
+                    </ul>
+                </div>
+            </header>
+
+            {/* PROJECTS SECTION */}
+            <section className={styles.content}>
+                <article className="">
+                    <p>
+                        I am a self taught developer based in Arkansas, USA. I have learned
+                        to develop responsive websites from the ground up along with a
+                        general understanding of software engineering. My discipline and
+                        persistence has led me to build projects for fun but also delve into
+                        a career of Frontend Web Development. I'm excited to continuously
+                        learn new developing technologies as well older tried and tested
+                        ones.
+                    </p>
+                </article>
+                <h2 className="section-title">Projects</h2>
+                <div className="proj-list d-flex flex-wrap flex-xl-nowrap">
+                    {projectElements}
+                </div>
+            </section>
+
+        </main>
+    );
+};
+
+export default Bio;
 
 
-// Ran into ID issues w/ client/server using random ID's since it's rendered twice.
-// Using Response from input as ID instead for now.
+// {/* SKILLS SECTION */}
+// <div className="d-flex justify-content-end">
+// <div className="top-link">
+//     <a href="#top" className="chevron text-decoration-underline">
+//         &#8593;
+//     </a>
+// </div>
+// </div>
