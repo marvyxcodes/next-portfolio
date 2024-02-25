@@ -1,0 +1,32 @@
+.info-section {
+    margin-bottom: 9rem;
+    scroll-margin-top: 3rem;
+}
+
+.modules-section {
+    /* max-width:500px; */
+}
+
+.work-module {
+    padding: 1rem .2rem;
+    margin-bottom:2rem;
+    display:flex;
+}
+
+.article p {
+    margin-bottom: 2rem;
+}
+
+.work-dates {
+    padding-right:1.2rem;
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+.work-dates p {
+    width: 100%;
+}
+
+.work-descriptions *  {
+    margin-bottom: 10px;
+}

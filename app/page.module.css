@@ -6,7 +6,7 @@
 .home {
   display:flex;
   flex-direction: row;
-  padding: 6rem;
+  padding: 0 6rem;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -18,6 +18,10 @@
   width: 50%;
   font-family: Montserrat;
   font-weight: 300;
+  position: sticky;
+  max-height: 100vh;
+  padding-top: 6rem;
+  top:0;
 }
 
 .biocard h1 {
@@ -30,19 +34,23 @@
 
 .content {
   width: 50%;
+  padding-top: 8rem;
 }
 
 .nav-list {
   list-style-type: none;
+  color: rgba(255, 255, 255, 0.352);
+  font-weight: 600;
 }
 
 .nav-list > li {
-
+  padding: 1rem 0;
 }
 
 .nav-list li:hover {
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   cursor: pointer;
+  color:white;
 }
 
 .bio-div h1 {
