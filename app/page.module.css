@@ -37,21 +37,7 @@
   padding-top: 8rem;
 }
 
-.nav-list {
-  list-style-type: none;
-  color: rgba(255, 255, 255, 0.352);
-  font-weight: 600;
-}
 
-.nav-list > li {
-  padding: 1rem 0;
-}
-
-.nav-list li:hover {
-  /* font-size: 1.1rem; */
-  cursor: pointer;
-  color:white;
-}
 
 .bio-div h1 {
   padding: 1rem 0;

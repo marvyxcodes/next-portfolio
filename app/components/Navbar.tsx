@@ -1,92 +1,56 @@
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import enticingVisions from "@/app/images/enticingVisions.png";
 import styles from "./Navbar.module.css";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const paths = [
-    {
-      path: "/",
-      name: "Home",
-    },
-    {
-      path: "/portfolio",
-      name: "Portfolio",
-    },
-    {
-      path: "/about",
-      name: "About",
-    },
+  const [currentNavigation, setCurrentNavigation] = useState("#info");
+  const router = useRouter();
+ 
+  function handleNavigation(e) {
+    e.preventDefault();
+    const target = e.target.hash;
+    setCurrentNavigation(target);
+  }
 
-    {
-      path: "/contact",
-      name: "Contact",
-    },
-  ];
+  function handleActive(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    if (e.target.localName === "a") {
+    const target = e.target.hash;
+    console.log(target);
+    setCurrentNavigation(target);
+    router.push(`/${target}`);
+    }
+  }
 
-  let navLinks = paths.map((item) => {
-    return (
-      <Link key={item.path} className="nav-link m-2" href={item.path}>
-        <div
-          className="w-100"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-        >
-          {item.name}
-        </div>
-      </Link>
-    );
-  });
 
   return (
-    <nav className={styles.navbar}>
-      <Link href="/" className="nav-logo">
-          <Image
-            className="logo"
-            alt="Enticing Visions Signature Logo"
-            src={enticingVisions}
-            width={50}
-            height={50}
-          ></Image>
-        </Link>
-        <div className={styles.menu}>
-        {navLinks}
-        </div>
-    </nav>
+    <nav className={styles["nav"]}>
+          <ul onClick={handleActive} className={styles['nav-list']}>
+            <li>
+              <a href="#info" className={currentNavigation === "#info" ? styles["active"] : ""}>
+              <span className={styles["nav-indicator"]}></span>
+              Info
+              </a>
+            </li>
+            <li>
+              <a href="#work" className={currentNavigation === "#work" ? styles["active"] : ""}>
+              <span className={styles["nav-indicator"]}></span>
+              Work</a>
+            </li>
+            <li>
+              <a href="#projects" className={currentNavigation === "#projects" ? styles["active"] : ""}>
+              <span className={styles["nav-indicator"]}></span>
+              Projects</a>
+            </li>
+          </ul>
+        </nav>
   );
 };
 
 export default Navbar;
 
 
-// previous nav
-{/* <nav className="navbar navbar-expand-md pt-3">
-      <div className="container-fluid">
-      <Link href="/" className="navbar-brand">
-          <Image
-            className="logo"
-            alt="Enticing Visions Signature Logo"
-            src={enticingVisions}
-          ></Image>
-        </Link>
-        <button
-          className="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="icon-bar top-bar"></span>
-          <span className="icon-bar top-bar"></span>
-          <span className="icon-bar top-bar"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="navbar-nav">{navLinks}</div>
-        </div>
-        
-      </div>
-    </nav> */}

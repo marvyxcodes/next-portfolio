@@ -1,25 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { EventHandler, ReactEventHandler, useEffect, useState } from "react";
 import linkedIn from "@/app/images/linked-in.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Information from "./components/Information";
 import styles from "./page.module.css";
+import Navbar from "./components/Navbar";
+import { useRouter } from "next/router";
 
 const Home = () => {
 
-  const [currentNavigation, setCurrentNavigation] = useState("info");
-
-  // function handleNavigation(e) {
-  //   e.preventDefault();
-  //   const target = e.target.id;
-  //   setCurrentNavigation(target);
-    
-  // }
-
-  // console.log(currentNavigation);
-  
 
   return (
     <main className={styles.home}>
@@ -31,13 +22,7 @@ const Home = () => {
           <p></p>
           
         </div>
-        <nav className={styles["nav"]}>
-          <ul className={styles['nav-list']}>
-            <li><a href="#info">Info</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-          </ul>
-        </nav>
+        <Navbar/>
       </header>
 
 

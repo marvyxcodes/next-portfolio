@@ -14,7 +14,7 @@
 }
 
 .article p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .work-dates {
@@ -30,3 +30,19 @@
 .work-descriptions *  {
     margin-bottom: 10px;
 }
+
+.project-module {
+    display:flex;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+}
+
+.project-module:hover {
+    background-color: rgba(255, 255, 255, 0.072);
+}
+
+.project-module img {
+    margin-right: 1.2rem;
+}
+
+

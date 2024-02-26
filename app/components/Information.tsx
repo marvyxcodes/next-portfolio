@@ -12,7 +12,7 @@ const Information = (props: Props) => {
 
 
   let info = (
-    <article id="info" className={styles["article"]}>
+    <article className={styles["article"]}>
       <p>
         I have been drawn to computers since I was about 12 years old, I always found myself googling things instead of reading books as it seemed to be a more efficient way of getting the answers to so many questions I had.
       </p>
@@ -40,7 +40,7 @@ const Information = (props: Props) => {
 
   let workElements = work.map((item => {
     return (
-      <div id="work" key={item.title} className={styles["work-module"]}>
+      <div key={item.title} className={styles["work-module"]}>
         <div className={styles["work-dates"]}>
           <p>{item.start_date + " — " + item.end_date}</p>
         </div>
@@ -87,29 +87,17 @@ const Information = (props: Props) => {
 
   let projectElements = projects.map((project) => {
     return (
-      <div id="projects" key={project.name} className="proj-node">
+      <div key={project.name} className={styles["project-module"]}>
         <Image
           // className={styles.projectImage}
           alt={project.imgAlt}
           src={project.picSrc}
-          width={300}
+          width={175}
         />
-        <ul className="t-stacks">
-          {project.tech.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-        </ul>
+       
         <div className="proj-info">
           <h1>{project.name}</h1>
           <p>{project.desc}</p>
-          <div className="proj-links">
-            <a target="_blank" href={project.href} rel="noreferrer">
-              Demo
-            </a>
-            <a target="_blank" href={project.repo} rel="noreferrer">
-              Repo
-            </a>
-          </div>
         </div>
       </div>
     );
@@ -118,11 +106,13 @@ const Information = (props: Props) => {
 
   return (
     <>
-      <section className={styles["info-section"]}>{info}</section>
+      <section id="info" className={styles["info-section"]}>{info}</section>
       <section
+        id="work"
         className={`${styles["info-section"]} ${styles["modules-section"]}`}>{workElements}
       </section>
       <section
+        id="projects"
         className={`${styles["info-section"]} ${styles["modules-section"]}`}>{projectElements}
       </section>
     </>
@@ -133,6 +123,12 @@ export default Information
 
 
 
+
+// <ul className="t-stacks">
+// {project.tech.map((item) => {
+//   return <li key={item}>{item}</li>;
+// })}
+// </ul>
 
 
 
