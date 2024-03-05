@@ -33,9 +33,9 @@ const Information = (props: Props) => {
 
     { name: "Gates Corp", title: "Distribution Center Associate", desc: "Pick, package, and ship domestically and internationally as part of a team to fulfill customer orders in a timely manner meeting deadlines and quota numbers.", start_date: "2022", end_date: "2022", tech_used: "" },
 
-    { name: "City of Rosemead", title: "Recreation Leader I", desc: "", start_date: "2015", end_date: "2022", tech_used: "" },
+    { name: "City of Rosemead", title: "Recreation Leader I", desc: "Tasked with leading various activities, programs, and city-wide events, utilizing expertise in leadership and team principles. This position involves maintaining open communication and fostering positive relationships with the public, participants, and staff. Additionally, responsible for enforcing safety protocols, responding to emergencies, and overseeing the maintenance of city facilities, equipment, and supplies to facilitate community engagement.", start_date: "2015", end_date: "2022", tech_used: "" },
 
-    { name: "City of El Monte", title: "Office Assistant", desc: "", start_date: "2019", end_date: "2021", tech_used: "" }
+    { name: "City of El Monte", title: "Office Assistant", desc: "Responsible for preparing routine office documents and communications, including correspondence, memoranda, reports, forms, and flyers. Additionally, served as the front office receptionist, greeting and receiving customers, partners, and other City staff in a courteous and professional manner. Furthermore, entered data into spreadsheets and databases using Microsoft Excel and Access, ensuring accurate and organized record-keeping.", start_date: "2019", end_date: "2021", tech_used: "" }
   ];
 
   let workElements = work.map((item => {

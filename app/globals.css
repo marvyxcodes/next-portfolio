@@ -6,8 +6,8 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 220, 215, 201;
-  --background-end-rgb: 162, 123, 92;
+  --background-start-rgb: rgb(222, 202, 194);
+  --background-end-rgb: rgb(234, 195, 179);
 
 
   /* --primary-glow: conic-gradient(
@@ -39,13 +39,14 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: rgb(0, 0, 0);
+    --background-end-rgb: rgb(0, 0, 0);
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -88,25 +89,17 @@ body {
   scroll-behavior: smooth;
 }
 
-/* body {
+html {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  height: 100vh;
-} */
-
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background-color: rgb(var(--background-start-rgb)); */
-  height: 100vh;
+  background: linear-gradient(to bottom, 
+  var(--background-start-rgb), 
+  var(--background-end-rgb));
 }
 
+
+
 a {
-  color: inherit;
+  color: rgb(var(--foreground-rgb));
   text-decoration: none;
 }
 

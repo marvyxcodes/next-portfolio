@@ -20,6 +20,10 @@
     align-items: center;
     padding: .2rem 0;
   }
+
+  /* .nav-list a:hover {
+    width:4rem;
+  } */
   
   .nav-indicator {
     width: 2rem;

@@ -16,35 +16,38 @@ const Navbar = () => {
   }
 
   function handleActive(e) {
+    console.log(e.currentTarget);
     e.stopPropagation();
     e.preventDefault();
-    if (e.target.localName === "a") {
-    const target = e.target.hash;
-    console.log(target);
+    if (e.currentTarget.localName === "li") {
+    const target = e.currentTarget.firstChild.hash;
     setCurrentNavigation(target);
     router.push(`/${target}`);
     }
   }
 
+  function handleNavHover(e) {
+
+  }
 
   return (
     <nav className={styles["nav"]}>
-          <ul onClick={handleActive} className={styles['nav-list']}>
-            <li>
+          <ul  className={styles['nav-list']}>
+            <li onClick={handleActive}>
               <a href="#info" className={currentNavigation === "#info" ? styles["active"] : ""}>
               <span className={styles["nav-indicator"]}></span>
-              Info
+              <span>Info</span>
               </a>
             </li>
-            <li>
+            <li onClick={handleActive}>
               <a href="#work" className={currentNavigation === "#work" ? styles["active"] : ""}>
               <span className={styles["nav-indicator"]}></span>
-              Work</a>
+              <span>Work</span></a>
             </li>
-            <li>
+            <li onClick={handleActive}>
               <a href="#projects" className={currentNavigation === "#projects" ? styles["active"] : ""}>
               <span className={styles["nav-indicator"]}></span>
-              Projects</a>
+              <span>Projects</span></a>
             </li>
           </ul>
         </nav>
