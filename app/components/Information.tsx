@@ -14,12 +14,11 @@ const Information = (props: Props) => {
   let info = (
     <article className={styles["article"]}>
       <p>
-        Avid enjoyer of all things nature. 
+        Avid enjoyer of all things nature.
       </p>
       <p>
         Aspiring retiree programmer/homesteader.
       </p>
-      
     </article>
   )
 
@@ -73,7 +72,7 @@ const Information = (props: Props) => {
       picSrc: weebMaxIco,
       imgAlt: "Anime Merchandise Store",
       tech: ["Next.js", "MongoDB", "Typescript", "Stripe"],
-      desc: "Full Stack E-Commerce Page for all things anime",
+      desc: "Full Stack E-Commerce Page",
       href: "https://weeb-max.vercel.app",
       repo: "https://github.com/enticingcode/weebMax",
     },
@@ -89,7 +88,7 @@ const Information = (props: Props) => {
           src={project.picSrc}
           width={175}
         />
-       
+
         <div className="proj-info">
           <h1>{project.name}</h1>
           <p>{project.desc}</p>
@@ -101,15 +100,11 @@ const Information = (props: Props) => {
 
   return (
     <>
-      <section id="info" className={styles["info-section"]}>{info}</section>
       <section
-        id="work"
-        className={`${styles["info-section"]} ${styles["modules-section"]}`}>{workElements}
+        id="info"
+        className={styles["info-section"]}>{info}
       </section>
-      <section
-        id="projects"
-        className={`${styles["info-section"]} ${styles["modules-section"]}`}>{projectElements}
-      </section>
+
     </>
   )
 }
@@ -117,7 +112,14 @@ const Information = (props: Props) => {
 export default Information
 
 
-
+//   < section
+// id = "work"
+// className = {`${styles["info-section"]} ${styles["modules-section"]}`}> { workElements }
+//       </section >
+//   <section
+//     id="projects"
+//     className={`${styles["info-section"]} ${styles["modules-section"]}`}>{projectElements}
+//   </section>
 
 // <ul className="t-stacks">
 // {project.tech.map((item) => {

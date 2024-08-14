@@ -16,11 +16,6 @@ const Home = () => {
     <main className={styles.home}>
       {/* INTRO BIO SECTION  */}
       <header id="top" className={styles.biocard}>
-        <div className={styles['bio-div']}>
-          <h1 className="">Marvin Trujillo</h1>
-          <h2>Full Stack Developer</h2>
-        </div>
-        <Navbar/>
       </header>
 
 

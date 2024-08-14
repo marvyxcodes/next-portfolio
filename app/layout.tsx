@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Big_Shoulders_Text, Inter } from "next/font/google";
 import "./globals.css";
+import styles from "./page.module.css";
+import Navbar from "./components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const chicagoText = Big_Shoulders_Text({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Marvin Trujillo",
@@ -16,7 +19,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className={styles['bio-div']}>
+          <h1 className="">hello, marvin here</h1>
+          <p>avid enjoyor of nature</p>
+          <p>aspiring retiree programmer & future homesteader</p>
+        </div>
+        <Navbar />
+        {children}
+
+        </body>
+        {/* <div className="green-block"></div> */}
+
     </html>
   );
 }

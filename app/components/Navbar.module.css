@@ -1,18 +1,9 @@
 .nav-list {
+    display:flex;
     list-style-type: none;
     color: rgba(255, 255, 255, 0.352);
     font-weight: 600;
     width: max-content;
-  }
-  
-  .nav-list > li {
-    padding: 1rem 0;
-  }
-  
-  .nav-list li:hover {
-    /* font-size: 1.1rem; */
-    cursor: pointer;
-    color:white;
   }
   
   .nav-list a {
@@ -25,13 +16,3 @@
     width:4rem;
   } */
   
-  .nav-indicator {
-    width: 2rem;
-    background-color: white;
-    height: 1px;
-    margin-right: 1rem;
-  }
-
-  .active .nav-indicator {
-    width: 4rem;
-  }
