@@ -14,17 +14,12 @@ const Information = (props: Props) => {
   let info = (
     <article className={styles["article"]}>
       <p>
-        I have been drawn to computers since I was about 12 years old, I always found myself googling things instead of reading books as it seemed to be a more efficient way of getting the answers to so many questions I had.
+        Avid enjoyer of all things nature. 
       </p>
       <p>
-        It wasn't up until sometime in 2021 that I decided I would try my hand at programming and really enjoyed the prospects of it. I consider myself to be a problem solver, so programming came naturally after a brutal effort of learning.
+        Aspiring retiree programmer/homesteader.
       </p>
-      <p>
-        Now my main focus is web development, as I have found it is the wild west of technological advancement and does not seem to be slowing down any time soon. With a new web framework popping up every morning, it's a bit hard to get bored of it.
-      </p>
-      <p>
-        Aside from my technological interests, on my days off I enjoy going out to parks and rivers, baking sourdough bread, and spending time with the family.
-      </p>
+      
     </article>
   )
 

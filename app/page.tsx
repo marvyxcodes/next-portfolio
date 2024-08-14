@@ -19,8 +19,6 @@ const Home = () => {
         <div className={styles['bio-div']}>
           <h1 className="">Marvin Trujillo</h1>
           <h2>Full Stack Developer</h2>
-          <p></p>
-          
         </div>
         <Navbar/>
       </header>
