@@ -1,9 +1,7 @@
 .home {
   display:flex;
-  flex-direction: row;
-  padding: 0 6rem;
-  max-width: 1500px;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
 }
 
 .biocard {
@@ -30,14 +28,11 @@
   padding-top: 8rem;
 }
 
-
-
-.bio-div h1 {
-  padding: 1rem 0;
-  font-size: 3rem;
+.bio-div {
+  margin: 0 2rem;
+  text-align: center;
 }
 
-.bio-div h2 {
-  padding: 1rem 0;
-  font-size: 1.5rem;
+.bio-div h1 {
+  margin: 1rem 0 ;
 }

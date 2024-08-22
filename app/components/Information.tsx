@@ -11,17 +11,6 @@ type Props = {
 const Information = (props: Props) => {
 
 
-  let info = (
-    <article className={styles["article"]}>
-      <p>
-        Avid enjoyer of all things nature.
-      </p>
-      <p>
-        Aspiring retiree programmer/homesteader.
-      </p>
-    </article>
-  )
-
   let work = [
     { name: "Logical Position", title: "Junior Web Developer II", desc: "Implement content deliverables on various client websites using a variety of Content Management Systems(CMS) from Wordpress, Shopify, BigCommerce, to more custom options. Always exercising discretion and using best industry practices as well as QA.", start_date: "2023", end_date: "Present", tech_used: "" },
 
@@ -102,7 +91,7 @@ const Information = (props: Props) => {
     <>
       <section
         id="info"
-        className={styles["info-section"]}>{info}
+        className={styles["info-section"]}>
       </section>
 
     </>

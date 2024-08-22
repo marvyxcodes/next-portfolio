@@ -33,9 +33,10 @@ const Navbar = () => {
   return (
     <nav className={styles["nav"]}>
       <div className={styles['nav-list']}>
-        <Link href="info" className="nav">home</Link>
+        <Link href="/" className="nav">home</Link>
         <Link href="work" className="nav">work</Link>
-        <Link href="blog" className="nav">photography blog</Link>
+        <Link href="blog" className="photography">photography</Link>
+        <Link href="blog">blog</Link>
       </div>
     </nav>
   );

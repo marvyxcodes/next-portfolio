@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 
 const chicagoText = Big_Shoulders_Text({ subsets: ["latin"] });
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Marvin Trujillo",
@@ -20,16 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className={styles['bio-div']}>
-          <h1 className="">hello, marvin here</h1>
-          <p>avid enjoyor of nature</p>
-          <p>aspiring retiree programmer & future homesteader</p>
-        </div>
         <Navbar />
         {children}
-
-        </body>
-        {/* <div className="green-block"></div> */}
+      </body>
+      {/* <div className="green-block"></div> */}
 
     </html>
   );
