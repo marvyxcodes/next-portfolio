@@ -23,7 +23,10 @@
 
 .photo-section {
   display:grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr;
+
+     
   grid-gap: 1rem;
 }
 
@@ -37,10 +40,15 @@
   border-radius: 2%;
 }
 
-.item-a {
+.item-b {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 
+}
+
+.item-f {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 /* .photo-section img {

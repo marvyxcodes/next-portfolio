@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Information from "./components/Information";
 import styles from "./page.module.css";
-import image1 from "./images/frontpage/20150925-la.jpg"
-import image2 from "./images/frontpage/20230602-DSC08696.jpg"
+import image1 from "./images/frontpg/image4.jpg";
+import image2 from "./images/frontpg/image3.jpg";
+import image3 from "./images/frontpg/image2.jpg";
+
 
 const Home = () => {
 
@@ -23,7 +25,8 @@ const Home = () => {
     <section className={styles.content}>
       {/* <Information /> */}
       <div className={styles['photo-section']}>
-        <div className={styles['photo-container']}>
+
+        <div className={`${styles['photo-container']} ${styles['item-a']} `}>
           <Image 
           className={`${styles['frontpg-img']}`}
           src={image1}
@@ -31,7 +34,8 @@ const Home = () => {
           >
           </Image>
         </div>
-        <div className={`${styles['photo-container']} ${styles['item-a']} `}>
+
+        <div className={`${styles['photo-container']} ${styles['item-b']} `}>
           <Image 
           className={styles['frontpg-img']}
           src={image2}
@@ -39,15 +43,35 @@ const Home = () => {
           >
           </Image>
         </div>
-        <div className={styles['photo-container']}>
+
+        <div className={`${styles['photo-container']} ${styles['item-c']} `}>
+          <Image
+            className={styles['frontpg-img']}
+            src={image1}
+            alt="noAlt"
+          >
+          </Image>
+        </div>
+
+        <div className={`${styles['photo-container']} ${styles['item-d']} `}>
           <Image 
           className={styles['frontpg-img']}
-          src={image1}
+          src={image2}
           alt="noAlt"
           >
           </Image>
         </div>
-        <div className={styles['photo-container']}>
+
+        <div className={`${styles['photo-container']} ${styles['item-e']} `}>
+          <Image 
+          className={styles['frontpg-img']}
+          src={image2}
+          alt="noAlt"
+          >
+          </Image>
+        </div>
+
+        <div className={`${styles['photo-container']} ${styles['item-f']} `}>
           <Image 
           className={styles['frontpg-img']}
           src={image1}
@@ -56,7 +80,6 @@ const Home = () => {
           </Image>
         </div>
         
-
       </div>
     </section>
     </main>
