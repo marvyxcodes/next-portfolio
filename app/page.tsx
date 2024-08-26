@@ -13,11 +13,11 @@ const Home = () => {
 
 
   return (
-    <main className={styles.home}>
+    <>
       {/* INTRO BIO SECTION  */}    
       <div className={styles['bio-div']}>
-        {/* <h1 className="">howdy, i'm marvin</h1> */}
-        <p>I'm a full-stack Developer focused on creating solutions and quality of life improvements.</p>
+        <h1 className="">howdy, i'm marvin</h1>
+        <p>I'm a full-stack developer focused on creating solutions and quality of life improvements.</p>
         <p>- avid enjoyor of nature -</p>
         <p>- aspiring retiree programmer & future homesteader -</p>
         <p>- navigating the never ending changes of the technological world -</p>
@@ -82,7 +82,7 @@ const Home = () => {
         
       </div>
     </section>
-    </main>
+    </>
   );
 };
 
