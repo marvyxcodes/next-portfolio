@@ -26,7 +26,7 @@ const Home = () => {
       {/* <Information /> */}
       <div className={styles['photo-section']}>
 
-        <div className={`${styles['photo-container']} ${styles['item-a']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-a']}`}>
           <Image 
           className={`${styles['frontpg-img']}`}
           src={image1}
@@ -35,7 +35,7 @@ const Home = () => {
           </Image>
         </div>
 
-        <div className={`${styles['photo-container']} ${styles['item-b']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-b']}`}>
           <Image 
           className={styles['frontpg-img']}
           src={image2}
@@ -44,7 +44,7 @@ const Home = () => {
           </Image>
         </div>
 
-        <div className={`${styles['photo-container']} ${styles['item-c']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-c']}`}>
           <Image
             className={styles['frontpg-img']}
             src={image1}
@@ -53,7 +53,7 @@ const Home = () => {
           </Image>
         </div>
 
-        <div className={`${styles['photo-container']} ${styles['item-d']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-d']}`}>
           <Image 
           className={styles['frontpg-img']}
           src={image2}
@@ -62,7 +62,7 @@ const Home = () => {
           </Image>
         </div>
 
-        <div className={`${styles['photo-container']} ${styles['item-e']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-e']}`}>
           <Image 
           className={styles['frontpg-img']}
           src={image2}
@@ -71,7 +71,7 @@ const Home = () => {
           </Image>
         </div>
 
-        <div className={`${styles['photo-container']} ${styles['item-f']} `}>
+        <div className={`${styles['photo-container']} ${styles['item-f']}`}>
           <Image 
           className={styles['frontpg-img']}
           src={image1}

@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className={styles['nav-list']}>
         <Link href="/" className="nav">home</Link>
         <Link href="work" className="nav">work</Link>
-        <Link href="blog" className="photography">photography</Link>
+        <Link href="photography" className="photography">photography</Link>
         <Link href="blog">blog</Link>
       </div>
     </nav>
