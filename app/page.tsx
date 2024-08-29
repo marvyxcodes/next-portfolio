@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Information from "./components/Information";
 import styles from "./page.module.css";
-import image1 from "./images/frontpg/image4.jpg";
-import image2 from "./images/frontpg/image3.jpg";
-import image3 from "./images/frontpg/image2.jpg";
-
+import image1 from "./images/frontpg/image1.jpg";
+import image2 from "./images/frontpg/image2.jpg";
+import image3 from "./images/frontpg/image3.jpg";
+import image4 from "./images/frontpg/image4.jpg";
+import image5 from "./images/frontpg/image5.jpg";
+import image6 from "./images/frontpg/image6.jpg";
+import hashtag from "./images/svg/hashtag.svg";
 
 const Home = () => {
 
@@ -17,10 +20,7 @@ const Home = () => {
       {/* INTRO BIO SECTION  */}    
       <div className={styles['bio-div']}>
         <h1 className="">howdy, i'm marvin</h1>
-        <p>I'm a full-stack developer focused on creating solutions and quality of life improvements.</p>
-        <p>- avid enjoyor of nature -</p>
-        <p>- aspiring retiree programmer & future homesteader -</p>
-        <p>- navigating the never ending changes of the technological world -</p>
+        <p>I'm a full-stack developer focused on creating solutions and quality of life improvements. As an avid enjoyer of nature I love heading down to the nearest creek for a swim, or hiking the farthest mountainsides for a thrill. Hoping to own part-time homestead in future.</p>
       </div>
     <section className={styles.content}>
       {/* <Information /> */}
@@ -47,7 +47,7 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-c']}`}>
           <Image
             className={styles['frontpg-img']}
-            src={image1}
+            src={image3}
             alt="noAlt"
           >
           </Image>
@@ -56,7 +56,7 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-d']}`}>
           <Image 
           className={styles['frontpg-img']}
-          src={image2}
+          src={image4}
           alt="noAlt"
           >
           </Image>
@@ -65,7 +65,7 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-e']}`}>
           <Image 
           className={styles['frontpg-img']}
-          src={image2}
+          src={image5}
           alt="noAlt"
           >
           </Image>
@@ -74,14 +74,27 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-f']}`}>
           <Image 
           className={styles['frontpg-img']}
-          src={image1}
+          src={image6}
           alt="noAlt"
           >
           </Image>
         </div>
-        
+      </div>
+      <div className={styles.random}>
+        <p>
+          I live by a "Do-It-Yourself" mentality, if I can do it myself with the know-how at my fingertips I might as well do it. Youtube-University and the power of Google Searches has saved me time and money in many areas of my life, and it has produced a never ceasing curiosity of figuring out how things work and why they do.
+        </p>
+        <br></br>
+        <p>
+          This has led me down a path of learning and developing marketable skills in an evolving technological landscape.
+        </p>
       </div>
     </section>
+    <button 
+          onClick={()=> {console.log('haha, you thought this did something, it will eventually')}}
+          className={styles["socials-btn"]}>
+            <Image src={hashtag} alt="Hashtag Social Media Button"></Image>
+          </button>
     </>
   );
 };

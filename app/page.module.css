@@ -1,5 +1,5 @@
 .main {
-  width: 100%;
+  width: 70%;
   height:100%;
   display:flex;
   flex-direction: column;
@@ -12,9 +12,13 @@
   margin-bottom:2.5rem;
 }
 
+.bio-div p {
+  text-align: justify;
+}
+
 .content {
   width: 100%;
-  padding-top: 2rem;
+  
 }
 
 .photo-section {
@@ -23,10 +27,11 @@
   grid-template-columns:1fr 1fr 1fr;
   grid-gap: 1rem;
   justify-content: end;
+  padding-top: 2rem;
+  padding-bottom:2rem;
 }
 
 .photo-container {
-  object-fit:contain;
   /* display:flex;
   justify-content:center; */
 }
@@ -62,13 +67,13 @@
 }
 
 .item-e {
-  grid-column: 3 /4;
-  grid-row: 2 / 4 ;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 .item-f {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-column: 3 /4;
+  grid-row: 2 / 4 ;
 }
 
 /* .photo-section img {
@@ -76,10 +81,28 @@
   max-height:fit-content;
 } */
 
+/* Make this button responsive to Light/Dark shift */
+.socials-btn {
+  border-radius: 50%;
+  padding: .5rem;
+  border:none;
+  background-color: black;
+  position:fixed;
+  right: 2%;
+  top: 2%;
+}
 
-@media (max-width: 800px) {
+.socials-btn:hover {
+  background-color:rgb(69, 69, 69);
+  transition: all .2s;
+}
+
+@media (width <= 1100px) {
   /* … */
   .main {
     width: 90%;
   }
+
+  
 }
+

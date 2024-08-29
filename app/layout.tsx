@@ -24,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         </main>
+          
       </body>
       {/* <div className="green-block"></div> */}
 
