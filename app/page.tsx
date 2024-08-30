@@ -10,6 +10,7 @@ import image3 from "./images/frontpg/image3.jpg";
 import image4 from "./images/frontpg/image4.jpg";
 import image5 from "./images/frontpg/image5.jpg";
 import image6 from "./images/frontpg/image6.jpg";
+import image52 from "./images/frontpg/image5-2.jpg";
 import hashtag from "./images/svg/hashtag.svg";
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
       {/* INTRO BIO SECTION  */}    
       <div className={styles['bio-div']}>
         <h1 className="">howdy, i'm marvin</h1>
-        <p>I'm a full-stack developer focused on creating solutions and quality of life improvements. As an avid enjoyer of nature I love heading down to the nearest creek for a swim, or hiking the farthest mountainsides for a thrill. Hoping to own part-time homestead in future.</p>
+        <p>I'm a full-stack developer focused on creating solutions and quality of life improvements. As an avid enjoyer of nature I love heading down to the nearest creek for a swim, or hiking the farthest mountainsides for a thrill. Hoping to own a part-time homestead in the future.</p>
       </div>
     <section className={styles.content}>
       {/* <Information /> */}
@@ -65,7 +66,7 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-e']}`}>
           <Image 
           className={styles['frontpg-img']}
-          src={image5}
+          src={image52}
           alt="noAlt"
           >
           </Image>
@@ -84,7 +85,6 @@ const Home = () => {
         <p>
           I live by a "Do-It-Yourself" mentality, if I can do it myself with the know-how at my fingertips I might as well do it. Youtube-University and the power of Google Searches has saved me time and money in many areas of my life, and it has produced a never ceasing curiosity of figuring out how things work and why they do.
         </p>
-        <br></br>
         <p>
           This has led me down a path of learning and developing marketable skills in an evolving technological landscape.
         </p>

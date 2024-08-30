@@ -1,0 +1,14 @@
+.header {
+    margin-bottom: 2rem;
+}
+
+.headpar {
+    margin-bottom: 1rem;
+}
+
+.divider {
+    margin-top:2rem;
+    margin-bottom:2rem;
+    width: 30%;
+    border-color: rgba(255, 255, 255, 0.39);
+}

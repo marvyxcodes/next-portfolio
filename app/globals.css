@@ -120,6 +120,18 @@ a {
   position:fixed;
 }
 
+p {
+  margin: 1rem 0;
+}
+
+ul {
+ padding-left: 2rem;
+}
+
+li {
+  margin: 1rem 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
