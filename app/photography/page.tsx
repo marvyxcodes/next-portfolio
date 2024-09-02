@@ -29,6 +29,8 @@ import image16 from "../images/photo_gallery/20160320-IMG_0336.jpg";
 
 const page = () => {
 
+
+  // I could arrange 4-5 images manually in sub-arrays?
   const imageFileNames = [
     "1.jpg",
     "2.jpg",
@@ -48,21 +50,26 @@ const page = () => {
   ];
 
 
-  // Gallery needs to create a column for every 4 pictures there are.
+  // For every 4-5 images, I want to create a new 'column' div, containing those 4-5 images, then move onto the next 4-5, until whole array is iterated.
+
+  for(let i = 0; i < imageFileNames.length; i += 4) {
+    console.log(imageFileNames[i]);
+    const div = document.createElement("div");
+
+    for(let j = i; j < i + 4 && j < imageFileNames.length; j++){
+      return(<Image src={`/photo_gallery/${imageFileNames[j]}`} alt="tak" />)
+    }
+  }
 
   const gallery = imageFileNames.map((item) => {
     //for every filename, create a Image file for it.
     return (
-      <div className={`${item} ${styles["column"]}`}>
-        <Image width={500} height={300} className={styles.photo} src={`/photo_gallery/${item}`} alt={"tak"} />
+      <div key={item} className={`${item} ${styles["column"]}`}>
+        <Image fill className={styles.photo} src={`/photo_gallery/${item}`} alt={"tak"} />
         </div>
     )
   }
   );
-
-  // for (let i = 0; i < imageFileNames.length; i++) {
-
-  // };
 
   // const test2 = imageFileNames.map((item) => {
   //   return <div>{item}</div>
