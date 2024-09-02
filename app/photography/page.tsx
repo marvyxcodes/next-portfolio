@@ -52,23 +52,26 @@ const page = () => {
 
   const gallery = imageFileNames.map((item) => {
     //for every filename, create a Image file for it.
-    
+    return (
+      <div className={`${item} ${styles["column"]}`}>
+        <Image width={500} height={300} className={styles.photo} src={`/photo_gallery/${item}`} alt={"tak"} />
+        </div>
+    )
   }
   );
 
-  for (let i = 0; i < imageFileNames.length; i++) {
-    
-  }
+  // for (let i = 0; i < imageFileNames.length; i++) {
 
+  // };
 
-  const test2 = imageFileNames.map((item) => {
-    return <div>{item}</div>
-  });
+  // const test2 = imageFileNames.map((item) => {
+  //   return <div>{item}</div>
+  // });
 
   return (
     <section>
       <div className={styles["photo-grid"]}>
-        {test2}
+        {gallery}
       </div>
     </section>
   )

@@ -16,3 +16,8 @@
     margin-top: 8px;
     vertical-align: middle;
 }
+
+.photo {
+  width: 100%;
+  height: auto;  
+}
