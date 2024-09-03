@@ -9,26 +9,27 @@ import { useRouter } from "next/navigation";
 const Navbar = () => {
   const [currentNavigation, setCurrentNavigation] = useState("#info");
   const router = useRouter();
-  function handleNavigation(e) {
-    e.preventDefault();
-    const target = e.target.hash;
-    setCurrentNavigation(target);
-  }
 
-  function handleActive(e) {
-    console.log(e.currentTarget);
-    e.stopPropagation();
-    e.preventDefault();
-    if (e.currentTarget.localName === "li") {
-      const target = e.currentTarget.firstChild.hash;
-      setCurrentNavigation(target);
-      router.push(`/${target}`);
-    }
-  }
+  // function handleNavigation(e) {
+  //   e.preventDefault();
+  //   const target = e.target.hash;
+  //   setCurrentNavigation(target);
+  // }
 
-  function handleNavHover(e) {
+  // function handleActive(e) {
+  //   console.log(e.currentTarget);
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  //   if (e.currentTarget.localName === "li") {
+  //     const target = e.currentTarget.firstChild.hash;
+  //     setCurrentNavigation(target);
+  //     router.push(`/${target}`);
+  //   }
+  // }
 
-  }
+  // function handleNavHover(e) {
+
+  // }
 
   return (
     <nav className={styles["nav"]}>

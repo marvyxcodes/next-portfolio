@@ -2,7 +2,7 @@
 
 import React, { ChangeEvent, KeyboardEvent, KeyboardEventHandler, useState, useId } from 'react'
 import Image from 'next/image';
-import evLogo from "@/app/images/enticingVisions.png"
+import evLogo from "@/app/images/projects/enticingVisions.png"
 import styles from "./page.module.css"
 import { v4 as uuidv4 } from "uuid";
 

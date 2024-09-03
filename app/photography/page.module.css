@@ -1,3 +1,7 @@
+.photo-sec {
+    height: auto;
+}
+
 .photo-grid {
     /* display:grid; */
     display:flex;
@@ -5,13 +9,15 @@
     padding: 0 4px;
 }
 .column {
-    flex:30%;
+    /* flex:25%; */
+    flex:50%;
+    flex-wrap:wrap;
     padding: 0 4px;
+    position:relative;
+    height:fit-content;
 }
 
 .column img {
-    width:100%;
-    height:auto;
     margin-top: 8px;
     vertical-align: middle;
 }
@@ -19,5 +25,14 @@
 .photo {
   width: 100%;
   height: auto;
-  object-fit:cover;
+  object-fit:contain;
+}
+
+.photo:hover {
+    cursor:pointer;
+    transition:all 1s;
+    transform:scale(1.1);
+    position:relative;
+    z-index:100;
+    -webkit-filter: brightness(90%);
 }
