@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from 'react';
 import styles from "./page.module.css";
 import Image from 'next/image';
@@ -57,7 +57,7 @@ const page = () => {
     "IMG_42.jpg",
     "IMG_43.jpg",
     "IMG_44.jpg",
-  ]; 
+  ];
 
   // TEST ARRAY FOR IMAGES DUE TO SLOW LOAD //
   // const imageFileNames = [
@@ -75,31 +75,40 @@ const page = () => {
   // ];
 
 
+  function shufflePhotoArray(array: string[]) {
+      const sortedArray = array.sort((a, b) => 0.5 - Math.random());
+      return sortedArray;
+  }
+
+  
   function chunkArray(array: string[], chunkSize: number) {
     const result = [];
-    for(let i = 0; i < array.length; i += chunkSize) {
+    for (let i = 0; i < array.length; i += chunkSize) {
       result.push(array.slice(i, i + chunkSize));
     }
     return result;
   }
 
-  const chunks = chunkArray(imageFileNames, 5);
+  const chunks = chunkArray(shufflePhotoArray(imageFileNames), 15);
 
   const gallery = chunks.map((item) => {
     return (
-    <div key={uniqid()} className={`${styles["column"]}`}>
-      {item.map((filename:string) => {
-        return <Link key={filename} href={`/photo_gallery/resized/${filename}`}><Image 
-        width={0}
-        height={0}
-        style={{ width:"100%", height: "auto"}}
-        className={styles.photo} 
-        src={`/photo_gallery/resized/${filename}`} 
-        alt={"test"}
-        unoptimized={true} /></Link>
-
-      })}
-    </div>
+      <div key={uniqid()} className={`${styles["column"]}`}>
+        {item.map((filename: string) => {
+          return (
+            <Link key={filename} href={`/photo_gallery/resized/${filename}`}>
+              <Image
+                width={0}
+                height={0}
+                style={{ width: "100%", height: "auto" }}
+                className={styles.photo}
+                src={`/photo_gallery/resized/${filename}`}
+                alt={"test"}
+                unoptimized={true} />
+            </Link>
+          )
+        })}
+      </div>
     )
   })
 
