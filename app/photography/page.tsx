@@ -81,7 +81,8 @@ const page = () => {
   }
 
   
-  function chunkArray(array: string[], chunkSize: number) {
+  function chunkArray(shuffler: Function, chunkSize: number) {
+    const array = shuffler(imageFileNames);
     const result = [];
     for (let i = 0; i < array.length; i += chunkSize) {
       result.push(array.slice(i, i + chunkSize));
@@ -89,7 +90,7 @@ const page = () => {
     return result;
   }
 
-  const chunks = chunkArray(shufflePhotoArray(imageFileNames), 15);
+  const chunks = chunkArray(shufflePhotoArray, 15);
 
   const gallery = chunks.map((item) => {
     return (
