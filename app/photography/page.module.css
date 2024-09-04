@@ -30,7 +30,7 @@
 
 .photo:hover {
     cursor:pointer;
-    transition:all 1s;
+    transition:all .2s;
     transform:scale(1.1);
     position:relative;
     z-index:100;

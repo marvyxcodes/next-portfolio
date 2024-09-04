@@ -57,8 +57,6 @@ const page = () => {
     "IMG_42.jpg",
     "IMG_43.jpg",
     "IMG_44.jpg",
-    "IMG_45.jpg",
-
   ]; 
 
   // TEST ARRAY FOR IMAGES DUE TO SLOW LOAD //
@@ -91,15 +89,14 @@ const page = () => {
     return (
     <div key={uniqid()} className={`${styles["column"]}`}>
       {item.map((filename:string) => {
-        return <Link href={`/photo_gallery/${filename}`}><Image 
+        return <Link key={filename} href={`/photo_gallery/resized/${filename}`}><Image 
         width={0}
         height={0}
         style={{ width:"100%", height: "auto"}}
         className={styles.photo} 
-        key={filename} 
-        src={`/photo_gallery/${filename}`} 
+        src={`/photo_gallery/resized/${filename}`} 
         alt={"test"}
-          unoptimized={true} /></Link>
+        unoptimized={true} /></Link>
 
       })}
     </div>
