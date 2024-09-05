@@ -14,7 +14,6 @@ import hashtag from "./images/svg/hashtag.svg";
 
 const Home = () => {
 
-
   return (
     <>
       {/* INTRO BIO SECTION  */}    
@@ -25,7 +24,6 @@ const Home = () => {
     <section className={styles.content}>
       {/* <Information /> */}
       <div className={styles['photo-section']}>
-
         <div className={`${styles['photo-container']} ${styles['item-a']}`}>
           <Image 
           className={`${styles['frontpg-img']}`}

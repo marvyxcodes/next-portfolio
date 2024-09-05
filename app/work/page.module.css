@@ -12,3 +12,9 @@
     width: 30%;
     border-color: rgba(255, 255, 255, 0.39);
 }
+
+.jobTitle {
+    color: rgba(255, 255, 255, 0.856);
+    font-weight: 200;
+    margin-top:.2rem;
+}

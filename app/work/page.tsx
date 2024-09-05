@@ -3,13 +3,15 @@ import styles from "./page.module.css";
 
 const page = () => {
   return (
-    <section>
+    <section className={styles["work-section"]}>
       <div>
         <h1 className={styles.header}>work</h1>
         <p className={styles.headpar}>Striving to find a line of work that brings a meaningful impact on society and gives purpose to my vast skillset.</p>
+
         <hr className={styles.divider}></hr>
+        
         <h2>Logical Position</h2>
-        <p>Web Developer</p>
+        <h3 className={styles.jobTitle}>Web Developer</h3>
         <p>Working as a web developer for logical position granted me the opportunity to learn a different side of web development that involved implementing and optimizing content to meet SEO and accessibility industry standards.</p>
         <ul>
           <li>
@@ -38,10 +40,17 @@ const page = () => {
       <div>
         <hr className={styles.divider}></hr>
         <h2>City of Rosemead</h2>
-        <p>Recreation Leader</p>
+        <h3 className={styles.jobTitle}>Recreation Leader</h3>
         <p>During my time at the City of Rosemead I learned a great deal of interpersonal communication and client facing relations. I was also the first point of contact within my facility if anything technologically related needed troubleshooting/fixing prior to contacting the IT department due to my expertise.</p>
         <p>Leadership and teamwork were a big part of my developed skills while at the City of Rosemead as well due to the absence of management during specific times and weekends. My collegues and I would coordinate and train with newer staff staying up to date with policies and procedures.</p>
-    </div>
+      </div>
+      <aside>
+        <h3>Projects</h3>
+        <hr></hr>
+        <h4>TADAA</h4>
+        <h4>Budgety</h4>
+        <h4>Clothing E-Commerce</h4>
+      </aside>
     </section >
   )
 }
