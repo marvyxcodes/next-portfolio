@@ -137,5 +137,8 @@ li {
   html {
     color-scheme: dark;
   }
+  .hashtag {
+    fill:white;
+  }
 }
 

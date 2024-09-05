@@ -10,7 +10,6 @@ import image3 from "./images/frontpg/image3.jpg";
 import image4 from "./images/frontpg/image4.jpg";
 import image5 from "./images/frontpg/image5.jpg";
 import image6 from "./images/frontpg/image6.jpg";
-import image52 from "./images/frontpg/image5-2.jpg";
 import hashtag from "./images/svg/hashtag.svg";
 
 const Home = () => {
@@ -66,7 +65,7 @@ const Home = () => {
         <div className={`${styles['photo-container']} ${styles['item-e']}`}>
           <Image 
           className={styles['frontpg-img']}
-          src={image52}
+          src={image5}
           alt="noAlt"
           >
           </Image>
@@ -91,10 +90,9 @@ const Home = () => {
       </div>
     </section>
     <button 
-          onClick={()=> {console.log('haha, you thought this did something, it will eventually')}}
           className={styles["socials-btn"]}>
-            <Image src={hashtag} alt="Hashtag Social Media Button"></Image>
-          </button>
+            <Image className={styles.hashtag} src={hashtag} alt="Hashtag Social Media Button"></Image>
+      </button>
     </>
   );
 };

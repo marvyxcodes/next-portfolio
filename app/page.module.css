@@ -86,7 +86,7 @@
   border-radius: 50%;
   padding: .5rem;
   border:none;
-  background-color: black;
+  background-color: transparent;
   position:fixed;
   right: 2%;
   top: 2%;
@@ -103,6 +103,11 @@
     width: 90%;
   }
 
-  
+}
+
+@media (prefers-color-scheme:dark) {
+  .hashtag {
+  filter: invert(100%);
+}
 }
 
