@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from 'react';
 import styles from "./page.module.css";
 import Image from 'next/image';
@@ -76,8 +76,8 @@ const page = () => {
 
 
   function shufflePhotoArray(array: string[]) {
-      const sortedArray = array.sort((a, b) => 0.5 - Math.random());
-      return sortedArray;
+      const shuffledArray = array.sort((a, b) => 0.5 - Math.random());
+      return shuffledArray;
   }
 
   
@@ -87,15 +87,17 @@ const page = () => {
     for (let i = 0; i < array.length; i += chunkSize) {
       result.push(array.slice(i, i + chunkSize));
     }
+    console.log(result);
     return result;
   }
 
   const chunks = chunkArray(shufflePhotoArray, 15);
 
-  const gallery = chunks.map((item) => {
+  const gallery = chunks.map((chunk: string[]) => {
     return (
       <div key={uniqid()} className={`${styles["column"]}`}>
-        {item.map((filename: string) => {
+        {chunk.map((filename: string) => {
+          console.log(filename);
           return (
             <Link key={filename} href={`/photo_gallery/resized/${filename}`}>
               <Image
