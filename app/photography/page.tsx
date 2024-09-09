@@ -3,8 +3,6 @@ import React from 'react';
 import styles from "./page.module.css";
 import Image from 'next/image';
 import uniqid from "uniqid";
-import Link from 'next/link';
-
 
 
 const page = () => {
@@ -99,7 +97,7 @@ const page = () => {
         {chunk.map((filename: string) => {
           console.log(filename);
           return (
-            <Link key={filename} href={`/photo_gallery/resized/${filename}`}>
+            <a key={filename} href={`/photo_gallery/resized/${filename}`}>
               <Image
                 width={0}
                 height={0}
@@ -108,7 +106,7 @@ const page = () => {
                 src={`/photo_gallery/resized/${filename}`}
                 alt={"test"}
                 unoptimized={true} />
-            </Link>
+            </a>
           )
         })}
       </div>
