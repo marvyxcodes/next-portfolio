@@ -18,3 +18,26 @@
     font-weight: 200;
     margin-top:.2rem;
 }
+
+.projects {
+    display:flex;
+    flex-direction: column;
+}
+
+.project_list {
+    display:flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+.project_list p {
+    margin: 0;
+}
+
+.project_list a {
+    text-decoration:underline;
+}
+
+.project_list a:hover {
+    cursor: pointer;
+}

@@ -44,12 +44,14 @@ const page = () => {
         <p>During my time at the City of Rosemead I learned a great deal of interpersonal communication and client facing relations. I was also the first point of contact within my facility if anything technologically related needed troubleshooting/fixing prior to contacting the IT department due to my expertise.</p>
         <p>Leadership and teamwork were a big part of my developed skills while at the City of Rosemead as well due to the absence of management during specific times and weekends. My collegues and I would coordinate and train with newer staff staying up to date with policies and procedures.</p>
       </div>
-      <aside>
+      <hr className={styles.divider}></hr>
+      <aside className={styles.projects}>
         <h3>Projects</h3>
-        <hr></hr>
-        <h4>TADAA</h4>
-        <h4>Budgety</h4>
-        <h4>Clothing E-Commerce</h4>
+        <div className={styles.project_list}>
+        <a href="https://github.com/marvyxcodes/budgety">budgety</a>
+        <a href="https://github.com/marvyxcodes/selah_threads">selah_threads</a>
+        <p>tadaa [proprietary]</p>
+        </div>
       </aside>
     </section >
   )
